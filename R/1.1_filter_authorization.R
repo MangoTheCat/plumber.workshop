@@ -13,6 +13,8 @@ authorizer = function(req, res){
     plumber::forward()
 
   } else {
+    
+    browser()
 
     # get the authorization key, this will need to be saved earlier using 
     # Sys.setenv(plumber_auth_key=[password])
