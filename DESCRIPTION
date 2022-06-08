@@ -1,0 +1,19 @@
+Package: plumber.workshop
+Title: Plumber Workshop EARL 2022
+Version: 0.0.0.1
+Authors@R: 
+    person(given = "firstname",
+           family = "lastname",
+           role = c("aut", "cre"),
+           email = "your@email.com")
+Description: What the package does (one paragraph).
+License: What license is it under?
+Imports:
+    CVrisk,
+    plumber
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
