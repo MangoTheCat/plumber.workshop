@@ -1,0 +1,4 @@
+inst/api_future/plumber_future.R
+tests/*
+man/*
+docs/*

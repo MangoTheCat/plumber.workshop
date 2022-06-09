@@ -18,8 +18,7 @@ library(CVrisk)
 #################################################################
 
 
-lifespan_path = system.file("extdata", "lifespan_data_UK.tsv", package = "plumber.workshop")
-lifespan = read.table(lifespan_path, sep="\t", h=T)
+# < Enter Global Data Here >
 
 
 #################################################################
