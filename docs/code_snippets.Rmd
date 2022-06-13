@@ -1,0 +1,139 @@
+---
+output:
+  word_document: default
+---
+```{r 0, eval=F}
+
+#* @get /hello
+function() "Hello world!"
+
+```
+
+```{r 1.1, eval=F}
+
+devtools::install()
+
+devtools::load_all()
+
+
+```
+
+```{r 1.2, eval=F}
+
+#* @get /ok 
+function() "OK"
+
+#* @get /greetings 
+#* @param name:string User name
+function(name) paste0("Hello ", name, "!")
+
+
+```
+
+```{r 1.3, eval=F}
+
+#* @get /histogram
+#* @serializer png
+function() hist(rnorm(1000))
+
+#* @get /add
+#* @param x:int number 1
+#* @param y:int number 2
+#* @serializer unboxedJSON
+function(x, y) as.numeric(x) + as.numeric(y)
+
+#* @get /iris
+#* @serializer tsv
+function() iris
+
+
+```
+
+```{r 2.1, eval=F}
+
+{
+
+    "sex" : "male",
+    "age" : 50,
+    "bmi" : 22,
+    "sbp" : 134,
+    "bp_med" : 1,
+    "smoker" : 1,
+    "diabetes" : 0
+
+}
+
+
+```
+
+```{r 2.2, eval=F}
+
+Global data
+
+lifespan_path = system.file("extdata", "lifespan_data_UK.tsv", package = "plumber.workshop")
+lifespan = read.table(lifespan_path, sep="\t", h=T)
+
+#* @post /average_lifespan
+#* @param age:int User age
+#* @param sex:string User sex
+#* @serializer unboxedJSON
+function(age, sex){
+  plumber.workshop::average_lifespan(age, sex, lifespan)
+} 
+
+
+```
+
+```{r 2.3, eval=F}
+
+#* @post /browser
+function(req, res) browser()
+
+curl -X POST "http://localhost:80/browser" -H "Content-Type: application/json" -d "{\“x\": 1, \“y\": 2}" 
+
+Once the browser() breakpoint is activated you will be directed to the console:
+
+mode(req)
+names(req)
+as.list(req)
+req$args
+req$postBody
+mode(res)
+names(res)
+res$status
+
+
+```
+
+```{r 2.4, eval=F}
+
+#* auth
+plumber.workshop::authorizer
+
+Sys.setenv(plumber_auth_key="test123")  
+
+#* @preempt auth 
+  
+
+headers = httr::add_headers(AUTHORIZATION = "test123")
+
+httr::POST(config=headers)
+
+
+curl -X POST "http://localhost:80/heart_disease_risk" -H "Content-Type: application/json” -H “Authorization:test123" -d "{\"sex\": \"male\", \"age\": 50, \"bmi\": 24, \"sbp\": 125, \"bp_med\": 0, \"smoker\": 0, \"diabetes\": 1}" 
+
+
+
+is_swagger_request = function(path_info){
+
+  swagger_urls = c("/__docs__/", "/__swagger__/", "/openapi.json")
+    
+  any(sapply(swagger_urls, function(x) grepl(x, path_info)))
+
+} 
+
+
+
+
+```
+
