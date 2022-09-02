@@ -1,0 +1,7 @@
+[2,"Loading required package: CVrisk\r\n"]
+[2,"Running plumber API at http://0.0.0.0:80\r\n"]
+[2,"Running swagger Docs at http://127.0.0.1:80/__docs__/\r\n"]
+[1,"2022-06-06 15:42:07 - GET /add - libcurl/7.64.1 r-curl/4.3.2 httr/1.4.2 @ 127.0.0.1 \r\n"]
+[1,"2022-06-06 15:42:52 - GET /add - libcurl/7.64.1 r-curl/4.3.2 httr/1.4.2 @ 127.0.0.1 \r\n"]
+[1,"2022-06-06 15:43:23 - GET /ok - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36 @ 127.0.0.1 \r\n"]
+[1,"2022-06-06 15:43:23 - GET /favicon.ico - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36 @ 127.0.0.1 \r\n"]

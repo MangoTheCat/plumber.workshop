@@ -1,0 +1,1 @@
+[2,"Error in plumber::plumb(dir = system.file(api, package = \"plumber.workshop\")) : \r\n  No plumber.R file found in the specified directory: C:/Users/adam.waring/R/win-library/4.1/plumber.workshop/api_with_answers\r\nCalls: sourceWithProgress -> eval -> eval -> <Anonymous> -> <Anonymous>\r\nExecution halted\r\n"]

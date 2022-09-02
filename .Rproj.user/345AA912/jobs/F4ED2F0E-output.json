@@ -1,0 +1,3 @@
+[2,"Loading required package: CVrisk\r\n"]
+[2,"Running plumber API at http://api_with_answers:80\r\n"]
+[2,"Running swagger Docs at http://api_with_answers:80/__docs__/\r\napi_with_answers is not a valid IPv4 or IPv6 address.\r\ncreateTcpServer: Unknown system error 1\r\nError in initialize(...) : Failed to create server\r\nCalls: sourceWithProgress ... <Anonymous> -> startServer -> <Anonymous> -> initialize\r\nIn addition: Warning message:\r\npackage 'CVrisk' was built under R version 4.1.3 \r\nExecution halted\r\n"]
