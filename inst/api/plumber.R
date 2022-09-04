@@ -30,6 +30,9 @@ library(CVrisk)
 plumber.workshop::logger
 
 
+# < Enter auth filter here >
+
+
 #################################################################
 ##                          endpoints                          ##
 #################################################################
@@ -38,7 +41,7 @@ plumber.workshop::logger
 #* CVD risk calculator 
 #* Returns risk of CVD event in the next 10-years 
 #* 
-#* @param gender:str male or female
+#* @param sex:str male or female
 #* @param age:int age years (30-74)
 #* @param bmi:dbl body-mass index kg/m2 (average ~= 22)
 #* @param sbp:dbl Systolic blood pressure mmHg (average ~= 120)
@@ -49,3 +52,10 @@ plumber.workshop::logger
 #* @post /heart_disease_risk
 #* @serializer unboxedJSON
 plumber.workshop::cvd_event_risk
+
+
+# < Create ok endpoint here >
+
+
+# < Create greetings endpoint here >
+

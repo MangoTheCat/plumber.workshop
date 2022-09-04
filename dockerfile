@@ -4,7 +4,7 @@ FROM rstudio/plumber
 
 # create the ENV object for authentication (demo only)
 # WARNING! this is not a secure way to store passwords 
-ENV plumber_auth_key="[enter password here]"
+ENV plumber_auth_key="test123"
 
 # install packages 
 RUN Rscript -e "install.packages(c('remotes', 'CVrisk', 'readr'))"
